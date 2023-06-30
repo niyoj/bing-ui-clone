@@ -1,8 +1,10 @@
+import { useState, useRef } from "react";
+import { motion } from "framer-motion";
+
 import { BsChatText, BsMic, BsPinAngle } from "react-icons/bs";
 import { FaBroom } from "react-icons/fa";
 
 import styles from "./SearchBar.module.css";
-import { useState, useRef } from "react";
 
 const SearchBar = (props) => {
 	const [textareaActive, setTextareaActive] = useState(false);
@@ -41,7 +43,12 @@ const SearchBar = (props) => {
 	};
 
 	return (
-		<div className={styles["search-bar__wrapper"]}>
+		<motion.div
+			initial={{ opacity: 0, translateY: 100, translateX: "-50%" }}
+			animate={{ opacity: 1, translateY: 0 }}
+			transition={{ duration: 0.5, delay: 3 }}
+			className={styles["search-bar__wrapper"]}
+		>
 			<div className={styles.broom}>{<FaBroom />}</div>
 
 			<div
@@ -76,7 +83,7 @@ const SearchBar = (props) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 };
 

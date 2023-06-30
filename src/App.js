@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Header from "./components/UI/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Chat from "./components/Chat/Chat";
@@ -13,6 +14,7 @@ const answerPrompts = [
 		message: "My name is Bing the guru.",
 	},
 ];
+
 const App = () => {
 	const [chatMsg, setChatMsg] = useState([]);
 	const [chatMsgId, setChatMsgId] = useState(0);
