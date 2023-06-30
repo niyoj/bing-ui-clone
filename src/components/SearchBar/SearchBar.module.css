@@ -1,4 +1,6 @@
 .search-bar__wrapper {
+	position: absolute;
+	bottom: 0;
 	display: flex;
 	flex-direction: row;
 	margin: 50px;

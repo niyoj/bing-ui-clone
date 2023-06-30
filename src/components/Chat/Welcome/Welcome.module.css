@@ -1,0 +1,22 @@
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 100px;
+}
+
+.hero img {
+	width: 80.56px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+.hero h1 {
+	font-size: 4rem;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.hero p {
+	font-size: 2rem;
+}
