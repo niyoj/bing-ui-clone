@@ -18,3 +18,7 @@
     color: #f7f7f7;
     align-self: flex-end;
 }
+
+.chatbubble p {
+    line-height: 3.25rem;
+}

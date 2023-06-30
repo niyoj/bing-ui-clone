@@ -7,11 +7,23 @@ import Chat from "./components/Chat/Chat";
 const answerPrompts = [
 	{
 		from: "bing",
-		message: "Everything good on my side. What about you?",
+		message:
+			"Hey there! So much is happening in the tech world! Did you hear about the latest breakthrough in artificial intelligence? It's mind-blowing how machines are getting smarter every day!",
 	},
 	{
 		from: "bing",
-		message: "My name is Bing the guru.",
+		message:
+			"Well, I recently attended the Microsoft Build conference virtually, and let me tell you, it was an incredible experience! The event was packed with exciting announcements and insights into the future of technology.",
+	},
+	{
+		from: "bing",
+		message:
+			"Absolutely! The after-party has already kicked off at King's College! It's the perfect place for networking, celebrating, and having a great time. Shall we join them now?",
+	},
+	{
+		from: "bing",
+		message:
+			"Great! Here's the link you can use to join the event and be part of the Microsoft Build After Party fun!",
 	},
 ];
 
@@ -62,7 +74,7 @@ const App = () => {
 
 			setTimeout(() => {
 				setIsGenerating(false);
-			}, answerPrompts[bingId].message.length * 0.0625 * 1000+1500);
+			}, answerPrompts[bingId].message.length * 0.0625 * 1000 + 1500);
 		}
 	}, [replyBing]);
 
