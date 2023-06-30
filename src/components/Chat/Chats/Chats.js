@@ -13,7 +13,7 @@ const Chats = (props) => {
 		<section className={styles["chats-wrapper"]}>
 			<div className={styles.chats}>
 				{props.messages.map((msg) => {
-					return <ChatBubble from={msg.from} msg={msg.message} />;
+					return <ChatBubble key={msg.id} from={msg.from} msg={msg.message} />;
 				})}
 			</div>
 			<div ref={scrollRef}></div>
