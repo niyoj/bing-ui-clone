@@ -34,11 +34,15 @@ const SearchBar = (props) => {
 
 	const enterHandler = (event) => {
 		if (event.key === "Enter") {
+			event.preventDefault();
+			event.target.blur();
 			props.onNewMsg(prompt.current.value);
 
 			// not recomended but we are doing anyways
 			prompt.current.value = "";
 			textEntryHandler();
+			setTextareaActive(false);
+			setTextareaHeight(24);
 		}
 	};
 
@@ -67,7 +71,7 @@ const SearchBar = (props) => {
 						onClick={textareaActivateHandler}
 						onBlur={textareaActivateHandler}
 						onChange={textEntryHandler}
-						onKeyUp={enterHandler}
+						onKeyDown={enterHandler}
 						ref={prompt}
 						style={{ height: `${textareaHeight}px` }}
 					/>

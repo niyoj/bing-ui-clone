@@ -1,6 +1,7 @@
 .chats-wrapper {
     position: relative;
     margin-top: 4rem;
+    margin-bottom: 2rem;
     
     height: 100%;
 }

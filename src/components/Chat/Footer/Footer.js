@@ -1,9 +1,15 @@
+import { motion } from "framer-motion";
 import { FaPauseCircle } from "react-icons/fa";
 import styles from "./Footer.module.css";
 
 const Footer = () => {
 	return (
-		<footer className={styles.footer}>
+		<motion.footer
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+			className={styles.footer}
+		>
 			<button>
 				<FaPauseCircle
 					style={{ fontSize: "2.5rem", verticalAlign: "middle" }}
@@ -12,7 +18,7 @@ const Footer = () => {
 					Stop Responding
 				</span>
 			</button>
-		</footer>
+		</motion.footer>
 	);
 };
 
