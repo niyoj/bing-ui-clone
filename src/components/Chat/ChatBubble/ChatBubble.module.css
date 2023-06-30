@@ -22,3 +22,9 @@
 .chatbubble p {
     line-height: 3.25rem;
 }
+
+.chatbubble img {
+    margin: 2rem;
+    height: 200px;
+    cursor: pointer;
+}

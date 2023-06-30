@@ -1,6 +1,6 @@
 .footer {
-	position: absolute;
-	bottom: 0px;
+	position: fixed;
+	bottom: 115px;
 	left: 50%;
 	transform: translate(-50%);
 	font-size: 2rem;

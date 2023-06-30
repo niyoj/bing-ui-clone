@@ -4,6 +4,8 @@ import Header from "./components/UI/Header/Header";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Chat from "./components/Chat/Chat";
 
+import post from "./assets/post.png";
+
 const answerPrompts = [
 	{
 		from: "bing",
@@ -22,8 +24,11 @@ const answerPrompts = [
 	},
 	{
 		from: "bing",
+		type: "image",
 		message:
 			"Great! Here's the link you can use to join the event and be part of the Microsoft Build After Party fun!",
+		img: post,
+		alt: "Microsoft Build Afte party poster",
 	},
 ];
 
