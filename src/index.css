@@ -10,6 +10,7 @@ body {
 	height: 100vh;
 	margin: 0;
 	overflow-x: hidden;
+	overflow-y: hidden;
 	background-color: #e7edf9;
 	font-family: "Roboto", sans-serif;
 	font-size: 8px;

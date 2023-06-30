@@ -4,7 +4,7 @@ import { FaBroom } from "react-icons/fa";
 import styles from "./SearchBar.module.css";
 import { useState, useRef } from "react";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
 	const [textareaActive, setTextareaActive] = useState(false);
 	const [textareaLength, setTextareaLength] = useState(0);
 	const [textareaHeight, setTextareaHeight] = useState(24);
@@ -22,10 +22,22 @@ const SearchBar = () => {
 
 	const textEntryHandler = () => {
 		setTextareaLength(prompt.current.value.length);
-		
+
 		// resizing the height of textarea
 		const textarea = document.getElementById("textarea");
-		setTextareaHeight(prompt.current.value.length === 0 ? 24: textarea.scrollHeight);
+		setTextareaHeight(
+			prompt.current.value.length === 0 ? 24 : textarea.scrollHeight
+		);
+	};
+
+	const enterHandler = (event) => {
+		if (event.key === "Enter") {
+			props.onNewMsg(prompt.current.value);
+
+			// not recomended but we are doing anyways
+			prompt.current.value = "";
+			textEntryHandler();
+		}
 	};
 
 	return (
@@ -48,8 +60,9 @@ const SearchBar = () => {
 						onClick={textareaActivateHandler}
 						onBlur={textareaActivateHandler}
 						onChange={textEntryHandler}
+						onKeyUp={enterHandler}
 						ref={prompt}
-						style={{height: `${textareaHeight}px`}}
+						style={{ height: `${textareaHeight}px` }}
 					/>
 					<BsMic className={styles["search-bar__icon"]} />
 				</div>

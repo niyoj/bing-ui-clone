@@ -1,0 +1,19 @@
+.chatbubble {
+    display: inline-block;
+    padding: 2rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    max-width: calc(100vw - 50px - 100px);
+    margin: 1rem 0;
+    box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.12), 0px 1.6px 3.6px rgba(0, 0, 0, 0.16);
+}
+
+.chatbubble.bing {
+    background-color: #f7f7f7;
+}
+
+.chatbubble.user {
+    background-color: var(--primary-color);
+    color: #f7f7f7;
+    align-self: flex-end;
+}
